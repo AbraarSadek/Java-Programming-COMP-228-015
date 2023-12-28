@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abraar_15_lab5.HelloController">
+
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <!-- Hydro Bill Calculator Label -->
+  <Label text="Hydro Bill Calculator" underline="true">
+      <font>
+         <Font name="Comic Sans MS Bold Italic" size="22.0" />
+      </font>
+  </Label>
+
+  <!-- Grid Pane Holding -->
+  <GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Label Holding Words "STUDENT ID" -->
+    <Label text="STUDENT ID:" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+      </font>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </Label>
+
+    <!-- TextField For Users To Enter The Student's ID -->
+    <TextField fx:id="tfStudentID" promptText="Enter Student ID" GridPane.columnIndex="1" GridPane.rowIndex="0">
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </TextField>
+
+    <!-- Label Holding Words "Term One GPA" -->
+    <Label text="Term One GPA:" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <font>
+            <Font name="Comic Sans MS Bold Italic" size="16.0" />
+        </font>
+        <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </GridPane.margin>
+    </Label>
+
+    <!-- TextField For Users To Enter The Student's Term One GPA -->
+    <TextField fx:id="tfTermOneGPA" promptText="Enter Student's Term One GPA" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </GridPane.margin>
+    </TextField>
+
+      <!-- Label Holding Words "Term Two GPA" -->
+      <Label text="Term Two GPA:" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <font>
+              <Font name="Comic Sans MS Bold Italic" size="16.0" />
+          </font>
+          <GridPane.margin>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </GridPane.margin>
+      </Label>
+
+      <!-- TextField For Users To Enter The Student's Term Two GPA -->
+      <TextField fx:id="tfTermTwoGPA" promptText="Enter Student's Term Two GPA" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <GridPane.margin>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </GridPane.margin>
+      </TextField>
+
+      <!-- Label Holding Words "Term Three GPA" -->
+      <Label text="Term Three GPA:" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="3">
+          <font>
+              <Font name="Comic Sans MS Bold Italic" size="16.0" />
+          </font>
+          <GridPane.margin>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </GridPane.margin>
+      </Label>
+
+      <!-- TextField For Users To Enter The Student's Term Three GPA -->
+      <TextField fx:id="tfTermThreeGPA" promptText="Enter Student's Term Three GPA" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <GridPane.margin>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </GridPane.margin>
+      </TextField>
+
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+  </GridPane>
+
+  <!-- Save Data Button -->
+  <Button onAction="#onSaveDataButtonClick" text="Save Data!">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+  </Button>
+
+  <Label fx:id="outPut" />
+
+  <!-- Table To Display Store Student Grades From SQL Sever & Cumulative GPA -->
+  <TableView fx:id="tvStudentGrades" prefHeight="199.0" prefWidth="226.0" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="10">
+  </TableView>
+
+</VBox>

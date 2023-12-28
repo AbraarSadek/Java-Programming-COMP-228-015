@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abraar_15_lab4.HelloController">
+
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <!-- Label Holding Word "BOB'S GROCERIES" -->
+  <Label text="BOB'S GROCERIES" underline="true">
+      <font>
+         <Font name="Comic Sans MS Bold Italic" size="28.0" />
+      </font>
+  </Label>
+
+  <GridPane alignment="TOP_CENTER">
+
+      <children>
+
+        <!-- Label Holding Word "ITEMS" -->
+         <Label text="ITEMS" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </Label>
+
+         <!-- ComboBox For Item Being Purchased -->
+         <ComboBox fx:id="cmbItems" prefWidth="150.0" promptText="Select Item" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <GridPane.margin>
+               <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+            </GridPane.margin></ComboBox>
+
+         <!-- Label Holding Word "QUANTITY" -->
+         <Label text="QUANTITY" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+
+         <!-- ComboBox For The Quantity Of Items Being Purchased -->
+         <ComboBox fx:id="cmbQuantity" prefWidth="150.0" promptText="Select Quantity" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+            </GridPane.margin></ComboBox>
+
+         <!-- Label Holding Words "FULL NAME" -->
+         <Label text="FULL NAME" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </Label>
+
+         <!-- TextField For Users To Enter In Their Full Names -->
+         <TextField fx:id="tfFullName" prefWidth="157.0" promptText="Enter Full Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin></TextField>
+
+         <!-- Label Holding Words "ADDRESS" -->
+         <Label text="ADDRESS" GridPane.columnIndex="0" GridPane.rowIndex="3">
+           <font>
+             <Font size="18.0" />
+           </font>
+           <GridPane.margin>
+             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+           </GridPane.margin>
+         </Label>
+
+         <!-- TextField For Users To Enter In Their Full Address -->
+         <TextField fx:id="tfAddress" promptText="Enter Address" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </TextField>
+
+         <!-- Radio Button For Pick-Up -->
+         <RadioButton fx:id="rdbPickUp" mnemonicParsing="false" selected="true" text="Pick-Up" GridPane.columnIndex="0" GridPane.rowIndex="4">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </RadioButton>
+
+          <!-- Radio Button For Home-Delivery -->
+         <RadioButton fx:id="rdbHomeDelivery" mnemonicParsing="false" text="Home-Delivery" GridPane.columnIndex="1" GridPane.rowIndex="4">
+             <font>
+                 <Font size="15.0" />
+             </font>
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </RadioButton>
+
+         <!-- Button For Clearing Receipt -->
+         <Button onAction="#onClearReceiptButtonClick" mnemonicParsing="false" text="Clear Order" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+            <font>
+               <Font name="Comic Sans MS" size="12.0" />
+            </font>
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </Button>
+
+         <!-- Button For Adding Item To List -->
+         <Button onAction="#onAddItemButtonClick" mnemonicParsing="false" text="Add Item" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+             <font>
+                 <Font name="Comic Sans MS" size="12.0" />
+             </font>
+            <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+         </Button>
+
+      </children>
+
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+    </rowConstraints>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+
+   </GridPane>
+
+  <!-- Button For Placing An Order -->
+  <Button onAction="#onPlaceOrderButtonClick" text="PLACE ORDER" textAlignment="CENTER" />
+
+   <Label fx:id="receipt" >
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Label>
+
+</VBox>
