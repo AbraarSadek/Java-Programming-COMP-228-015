@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abraar_final.HelloController">
+
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <!-- HYDRO BILL CALCULATOR Label -->
+  <Label text="HYDRO BILL CALCULATOR" underline="true">
+    <font>
+      <Font name="Comic Sans MS Bold Italic" size="22.0" />
+    </font>
+  </Label>
+
+  <!-- Grid Pane Holding -->
+  <GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Label Holding Words "ACCOUNT NUMBER" -->
+    <Label text="ACCOUNT NUMBER:" underline="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+      </font>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </Label>
+
+    <!-- TextField For Users To Enter There Account Number -->
+    <TextField fx:id="tfAccountNumber" promptText="Enter Account Number" GridPane.columnIndex="2" GridPane.rowIndex="0">
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </TextField>
+
+    <!-- Label Holding Words "HYDRO CONSUMPTION UNITS" -->
+    <Label text="HYDRO CONSUMPTION UNITS:" underline="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <font>
+        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+      </font>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </Label>
+
+    <!-- TextField For Users To Enter There Account Number -->
+    <TextField fx:id="tfHydroConsumptionUnits" prefHeight="26.0" prefWidth="185.0" promptText="Enter Hydro Consumption Units" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </TextField>
+
+    <!-- Radio Button For Summer Season -->
+    <RadioButton fx:id="rdbSummer" mnemonicParsing="false" selected="true" text="SUMMER" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <font>
+        <Font size="15.0" />
+      </font>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </RadioButton>
+
+    <!-- Radio Button For Winter Season -->
+    <RadioButton fx:id="rdbWinter" mnemonicParsing="false" text="WINTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <font>
+        <Font size="15.0" />
+      </font>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </RadioButton>
+
+    <!-- Radio Button For Winter Season -->
+    <RadioButton fx:id="rdbFall" mnemonicParsing="false" text="FALL" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <font>
+        <Font size="15.0" />
+      </font>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </GridPane.margin>
+    </RadioButton>
+
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+  </GridPane>
+
+  <!-- Get Estimate Button -->
+  <Button onAction="#onGetEstimateClick" text="Get Estimate" textAlignment="CENTER">
+      <font>
+         <Font name="Comic Sans MS" size="14.0" />
+      </font>
+  </Button>
+
+  <!-- Label To Display Inserted Information -->
+  <Label fx:id="outPut" />
+
+  <!-- Table To Display Stored Hydro Bill Calculation From SQL Sever -->
+  <TableView fx:id="tvStoredHydroBillCalculation" prefHeight="199.0" prefWidth="226.0" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="10">
+  </TableView>
+
+</VBox>
